@@ -1,1 +1,37 @@
+// Deployed Site
 GET https://cse341-test.onrender.com/contacts;
+
+// LocalHost
+### Get All Users
+GET http://localhost:3000/contacts
+
+### Get Single User
+GET http://localhost:3000/contacts/666e62bb253c857763fc57ce
+
+### Create User
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Nick",
+    "lastName": "Patching",
+    "email": "nick.patching@gmail.com",
+    "favoriteColor": "Purple",
+    "birthday": "1-21-2000"
+}
+
+### Update User
+PUT http://localhost:3000/contacts/666e62bb253c857763fc57ce HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Asa",
+    "lastName": "Seversike",
+    "email": "asa.seversike@gmail.com",
+    "favoriteColor": "Blue",
+    "birthday": "9-11-2000"
+}
+
+### Delete User
+DELETE http://localhost:3000/contacts/667765e0aa5cdb31f80224b9 HTTP/1.1
+content-type: application/json
